@@ -6,14 +6,23 @@ import './App.css'
 function App() {
 
   const [puppies, setPuppies] = useState(puppyList)
+  const [featPupId, setFeatPupId] = useState(null)
+
   console.log("puppyList: ", puppyList);
+
+  //You can log handleClick before the return state VS including inline
+
+  //function handleClick() {
+  
+  //}
   
   return (
     <>
       <div className="App">
+      { featPupId && <p>{ featPupId }</p> }  
         
       {puppies.map((puppy) => {
-        return <p>{puppy.name}</p>
+        return <p onClick={()=>{ setFeatPupId(puppy.id)}} key={puppy.id}>{puppy.name}</p>
       
       })
     }
