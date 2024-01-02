@@ -3,6 +3,7 @@ import {puppyList} from './data.js'
 import './App.css'
 
 
+
 function App() {
 
   const [puppies, setPuppies] = useState(puppyList)
@@ -31,7 +32,7 @@ function App() {
       })
     }
 
-{featPupId && (
+     {featPupId && (
         <div>
           <h2>{featuredPup.name}</h2>
           <ul>
